@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="\add">追加する📝</a>
+<table border="1">
+   
+    {% for item in html_task%}
+    <tr>
+        <td>{{item["id"]}}</td>
+        <td>{{item["task"]}}</td>
+        <td>{{item["time"]}}</td>
+        <td><a href="/edit/{{item['id']}}">編集✏</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="\add">追加する📝</a>
+{% endblock %}
